@@ -8,7 +8,7 @@ from mmtrack.apis import inference_sot, init_model
 from mim.commands.download import download
 
 import warnings
-warnings.filterwarnings('ignore')
+warnings.filterwarnings('ignore', UserWarning)
 
 from argparse import ArgumentParser
 parser = ArgumentParser()
