@@ -22,7 +22,7 @@ pip install -r https://raw.githubusercontent.com/dai-ichiro/detection/main/requi
 ### Clone
 ~~~
 git clone https://github.com/dai-ichiro/detection2.git
-cd detection
+cd detection2
 ~~~
 ### Training
 ~~~
