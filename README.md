@@ -30,6 +30,11 @@ python tools/download_sample_videos.py
 python detection.py
 ~~~
 ### Inference after training
+#### image file
 ~~~
 python inference.py --image sample_images/sample01.jpg --weights runs/detect/train/weights/best.pt
+~~~
+#### webcam
+~~~
+python webcam_inference.py --weights runs/detect/train/weights/best.pt
 ~~~
