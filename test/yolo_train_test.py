@@ -12,7 +12,6 @@ def main():
     batch_size = args.batch
     weights = args.weights
 
-
     model = YOLO(weights)
     model.train(
         data = 'train.yaml',
