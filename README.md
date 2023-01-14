@@ -15,7 +15,7 @@ Python 3.9.13
 ~~~
 pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install mmcv-full==1.7.1 -f https://download.openmmlab.com/mmcv/dist/cu116/torch1.13.0/index.html
-pip install -r https://raw.githubusercontent.com/dai-ichiro/detection/main/requirements.txt
+pip install -r https://raw.githubusercontent.com/dai-ichiro/detection2/main/requirements.txt
 ~~~
 
 ## How to use
