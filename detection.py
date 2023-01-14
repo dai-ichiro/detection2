@@ -3,7 +3,7 @@ import glob
 import cv2
 import torch
 import mmcv
-from yolov5 import train 
+from ultralytics import YOLO
 from mmtrack.apis import inference_sot, init_model
 from mim.commands.download import download
 
@@ -125,16 +125,23 @@ def tracking():
         output_target_name = ['\'' + x + '\'' for x in classname_list]
         f.write(', '.join(output_target_name))
         f.write(']')
-
+'''
 def yolo_train():
     train.run(data='train.yaml', 
         epochs = epochs,
         batch_size = batch_size,
         weights = weights)
-
+'''
+def yolo_train():
+    model = YOLO('yolov8n.pt')
+    results = model.train(
+        data = 'train.yaml',
+        epochs = epochs
+    )
 if __name__ == '__main__':
     tracking()
     print('finish making dataset.')
     print('start training...')
     yolo_train()
     print('finish training.')
+

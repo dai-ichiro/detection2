@@ -1,4 +1,6 @@
-import yolov5
+from ultralytics import YOLO
+import os
+from PIL import Image
 from argparse import ArgumentParser
 
 def main():
@@ -10,9 +12,12 @@ def main():
     img_path = args.image
     weights = args.weights
 
-    model = yolov5.load(weights)
-    result = model(img_path)
-    result.show()
+    model = YOLO(weights)  
+    model(img_path, save=True)
+
+    img_fname = os.path.basename(img_path)
+    pil = Image.open(os.path.join('runs', 'detect', 'predict', img_fname))
+    pil.show()
     
 if __name__ == '__main__':
     main()
