@@ -134,7 +134,7 @@ def yolo_train():
 '''
 def yolo_train():
     model = YOLO('yolov8n.pt')
-    results = model.train(
+    model.train(
         data = 'train.yaml',
         epochs = epochs
     )
