@@ -1,3 +1,6 @@
+import warnings
+warnings.simplefilter('ignore', UserWarning)
+
 import os
 import glob
 import cv2
@@ -6,9 +9,6 @@ import mmcv
 from ultralytics import YOLO
 from mmtrack.apis import inference_sot, init_model
 from mim.commands.download import download
-
-import warnings
-warnings.filterwarnings('ignore', UserWarning)
 
 from argparse import ArgumentParser
 parser = ArgumentParser()
