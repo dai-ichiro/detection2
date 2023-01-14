@@ -7,6 +7,9 @@ from ultralytics import YOLO
 from mmtrack.apis import inference_sot, init_model
 from mim.commands.download import download
 
+import warnings
+warnings.filterwarnings('ignore')
+
 from argparse import ArgumentParser
 parser = ArgumentParser()
 parser.add_argument('--videos_dir', type=str, default='videos', help='video folder name' )
