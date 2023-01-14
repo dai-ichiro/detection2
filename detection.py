@@ -15,7 +15,7 @@ parser = ArgumentParser()
 parser.add_argument('--videos_dir', type=str, default='videos', help='video folder name' )
 parser.add_argument('--epochs', type=int, default=4, help='total training epochs')
 parser.add_argument('--batch', type=int, default=8, help='total batch size')
-parser.add_argument('--weights', type = str, default = 'yolov5s.pt', help = 'initial weights path')
+parser.add_argument('--weights', type = str, default = 'yolov8n.pt', help = 'initial weights path')
 args = parser.parse_args()
 
 videos_dir = args.videos_dir
@@ -128,15 +128,9 @@ def tracking():
         output_target_name = ['\'' + x + '\'' for x in classname_list]
         f.write(', '.join(output_target_name))
         f.write(']')
-'''
+
 def yolo_train():
-    train.run(data='train.yaml', 
-        epochs = epochs,
-        batch_size = batch_size,
-        weights = weights)
-'''
-def yolo_train():
-    model = YOLO('yolov8n.pt')
+    model = YOLO(weights)
     model.train(
         data = 'train.yaml',
         epochs = epochs,
