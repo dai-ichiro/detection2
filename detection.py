@@ -139,7 +139,8 @@ def yolo_train():
     model = YOLO('yolov8n.pt')
     model.train(
         data = 'train.yaml',
-        epochs = epochs
+        epochs = epochs,
+        batch = batch_size,
     )
 if __name__ == '__main__':
     tracking()
