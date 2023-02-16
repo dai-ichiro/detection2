@@ -22,7 +22,7 @@ google-auth-oauthlib==0.4.6
 grpcio==1.51.1
 idna==3.4
 importlib-metadata==6.0.0
-ipython==8.9.0
+ipython==8.10.0
 jedi==0.18.2
 kiwisolver==1.4.4
 lap==0.4.0
