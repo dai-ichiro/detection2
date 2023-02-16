@@ -88,7 +88,7 @@ typing_extensions==4.4.0
 ultralytics==8.0.22
 urllib3==1.26.14
 wcwidth==0.2.6
-Werkzeug==2.2.2
+Werkzeug==2.2.3
 xmltodict==0.13.0
 yapf==0.32.0
 zipp==3.12.0
