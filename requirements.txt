@@ -22,7 +22,7 @@ importlib-resources==5.10.2
 kiwisolver==1.4.4
 lap==0.4.0
 Markdown==3.4.1
-markdown-it-py==2.1.0
+markdown-it-py==2.2.0
 MarkupSafe==2.1.2
 matplotlib==3.7.0
 mdurl==0.1.2
